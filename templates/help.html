@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+   <center>
+    <table border="2">
+       
+        <h1>details for admission</h1> <br/><br/>
+        <tr>
+            <th>GENDER     :   </th>
+            <td> {{ gender }}</td>  
+        </tr>
+        <tr>
+        
+            <th>CAST :</th>
+            <td> {{ cast }} </td>
+        </tr>
+
+        {% for row in result %}
+        <tr>
+           <th>COURSE :</th>
+            <td>{{ row[0] }}</td>
+        </tr>
+
+        <tr>
+            <th>FEES : </th>
+            <td>{{ row[1] }}</td>
+        </tr>
+        {% endfor %}
+       
+    </table>
+    </center>
+</body>
+</html>
